@@ -1,0 +1,14 @@
+[project]
+name = "ollama-mistral-instruct-chat"
+version = "0.1.0"
+description = "Large Language Model chat demo calling local Ollama server from Python code."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "chromadb>=1.0.8",
+  "fastembed>=0.6.1",
+  "langchain>=0.3.25",
+  "langchain-community>=0.3.23",
+  "langchain-ollama>=0.3.2",
+  "ollama>=0.4.8",
+]

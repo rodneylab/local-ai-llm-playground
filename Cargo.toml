@@ -1,0 +1,37 @@
+[workspace]
+resolver = "2"
+members = ["crates/llamacpp_gemma3_4b_completion"]
+
+[workspace.lints.clippy]
+clone_on_ref_ptr = "deny"
+empty_drop = "deny"
+exit = "deny"
+filetype_is_file = "deny"
+get_unwrap = "deny"
+rc_buffer = "deny"
+rc_mutex = "deny"
+rest_pat_in_fully_bound_structs = "deny"
+unnecessary_safety_comment = "deny"
+
+[workspace.package]
+version = "0.1.0"
+authors = ["Rodney Johnson <ask@rodneylab.com>"]
+edition = "2024"
+license = "BSD-3-Clause"
+repository = "https://github.com/rodneylab/local-ai-llm-playground"
+rust-version = "1.87.0"
+description = "Experiments will local LLMs in Python and Rust"
+
+[workspace.dependencies]
+clap = { version = "4.5.38", features = ["derive"] }
+clap-verbosity-flag = "3.0.3"
+env_logger = "0.11.8"
+futures-util = "0.3.31"
+indicatif = "0.17.11"
+jiff = { version = "0.2.13", features = ["serde"] }
+log = "0.4.27"
+miette = { version = "7.6.0", features = ["fancy"] }
+reqwest = { version = "0.12.15", features = ["json", "stream"] }
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+tokio = { version = "1.45.0", features = ["full"] }
