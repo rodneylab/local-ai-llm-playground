@@ -18,7 +18,7 @@ llamacpp-gemma3-4b-completion
   <dd>llama.cpp</dd>
 
 <dt>Model</dt>
-  <dd><href="https://ollama.com/library/mistral">Gemma3 4B parameters, instruction-trained (gemma3-4b-it)</a></dd>
+  <dd><a href="https://huggingface.co/google/gemma-3-4b-it-qat-q4_0-gguf">Gemma3 4B parameters, instruction-trained (gemma3-4b-it)</a></dd>
 
 <dt>Model download size</dt>
   <dd>3.16GB</dd>
