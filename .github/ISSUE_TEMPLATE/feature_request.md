@@ -1,19 +1,31 @@
----
 name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
----
+description: Share your ideas for new features or improvements
+labels: ["feature request"]
+body:
 
-**Is your feature request related to a problem? Please describe.** A clear and
-concise description of what the problem is. Ex. I'm always frustrated when [...]
+- type: markdown
+  attributes:
+  value: | > [!NOTE] > > Do not prefix your title with "[REQUEST]", "[Feature request]", etc., a label will be added automatically.
 
-**Describe the solution you'd like** A clear and concise description of what you
-want to happen.
+      Please provide a detailed description of what the feature would do and what it would look like:
 
-**Describe alternatives you've considered** A clear and concise description of
-any alternative solutions or features you've considered.
+      * What problem would this feature solve?
+      * Are there any potential downsides to this feature?
+      * If applicable, what would the configuration for this feature look like?
+      * Are there any existing examples of this feature in other software?
+      * If applicable, include any external documentation required to implement this feature
+      * Anything else you think might be relevant
 
-**Additional context** Add any other context or screenshots about the feature
-request here.
+      **No need to copy the above list into your description, it's just a guide to help you provide the most useful information.**
+
+- type: textarea
+  id: description
+  validations:
+  required: true
+  attributes:
+  label: Description
+
+- type: markdown
+  attributes:
+  value: |
+  Thank you for taking the time to submit your idea.

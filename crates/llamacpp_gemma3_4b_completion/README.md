@@ -34,7 +34,10 @@ To set up llama.cpp to run locally using Homebrew on macOS run:
 brew install llama.cpp
 ```
 
-Then, download and serve the model:
+For other operating systems, or more details, see the
+[LLaMA.cpp HTTP Server Quick Start Guide](https://github.com/ggml-org/llama.cpp/tree/master/tools/server#quick-start).
+
+Next, download and serve the model:
 
 ```shell
 llama-server -hf google/gemma-3-4b-it-qat-q4_0-gguf
@@ -42,9 +45,6 @@ llama-server -hf google/gemma-3-4b-it-qat-q4_0-gguf
 
 By default, `llama-server` will listen on port `8080`; the port the example app is
 configured to use.
-
-For other operating systems, or more details, see the
-[LLaMA.cpp HTTP Server Quick Start Guide](https://github.com/ggml-org/llama.cpp/tree/master/tools/server#quick-start).
 
 Clone this repo and from the repository root folder run:
 
