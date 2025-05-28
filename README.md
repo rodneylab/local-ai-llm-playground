@@ -32,7 +32,8 @@ of artificial intelligence (AI). Ollama:
 - extremely memory-efficient through quantisation;
 - works well on CPU-only setups; and
 - is available as a library for integration with other applications.
-  Source: [Running Local LLMs](https://github.com/di37/running-llms-locally#advantages)
+
+Source: [Running Local LLMs](https://github.com/di37/running-llms-locally#advantages)
 
 ## Contents
 
@@ -41,9 +42,10 @@ of artificial intelligence (AI). Ollama:
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Examples](#examples)
-- [Why Run Local LLMs?](#why-run-local-llms)
-- [Issues and Support](#issues-and-support)
+- [Why Run Local LLMs?](#-why-run-local-llms)
+- [Issues and Support](#-issues-and-support)
 - [Contributions](#contributions)
+- [Acknowledgements](#acknowledgements)
 - [License](#license)
 
 ## Setup
@@ -81,10 +83,15 @@ Nothing to install beyond the prerequisites.
 
 <dl>
 <dt>llamacpp-gemma3-4b-completion</dt>
-<dd><a href="./crates/llamacpp_gemma3_4b_completion/README.md">Gemma3 LLM completion demo calling local llama.cpp server from Rust code.</a></dd>
+<dd>
+  <img src="./images/llamacpp_gemma3_4b_completion.gif" alt="Terminal animation shows the user entering the following command: 'cargo run --bin gemma-3-4b-it-qat-q4_0-gguf'. The app starts running and a prompt appears. At the prompt, the user types 'Building a website can be done in 10 simple steps:', then hits enter. The app responds with a stream of output ending with a copy of the input prompt, then the text 'Sending prompt to llama.cpp and awaiting response...'. After a short delay, of a few seconds, the model response starts streaming, it reads ' 1. Choose a domain name and web hosting provider. 2. Select a website builder or CMS. 3. Design your website layout. 4. Create your content. 5. Add images and videos. 6. Optimize your website for search engines. 7. Test your website on different devices. 8. Launch your website. 9. Promote your website. 10. Maintain and update your website regularly. Do you want me to elaborate on any of these steps, or perhaps provide links to resources for each?'. The app presents a new prompt, ready for a new question, though the animation restarts."/>
+    <a href="./crates/llamacpp_gemma3_4b_completion/README.md">Gemma3 LLM completion demo calling local llama.cpp server from Rust code.</a>
+</dd>
 
 <dt>ollama-mistral-instruct-chat</dt>
-<dd><a href="./python/ollama_mistral_instruct_chat/README.md">Mistral LLM chat demo calling local Ollama server from Python code.</a></dd>
+<dd>
+  <img src="./images/ollama_mistral_instruct_chat.gif" alt="Terminal animation shows the user entering the following command: 'uv run python/ollama_mistral_instruct_chat/src/main.py'. The app starts running and a prompt appears.  At the prompt, the user types 'Who was the first Prime Minister of Great Britain?', then hits enter.  After a short delay, of a few seconds, the model response starts streaming, it reads 'The position of Prime Minister in the United Kingdom does not exactly correspond to the Prime Minister you might be thinking of.  The office of Prime Minister as we know it today did not formally exist until the 18th century.  However, if we consider someone who played a role similar to that of a modern Prime Minister, Sir Robert Walpole is often considered the first defacto Ptime Minister, serving from 1721 to 1742 under King George II. He was the dominant figure in British politics during his long tenure and held various positions, including First Lord of the Treasuary and Chancellor of the Exchequer, although these titles were not yet officially linked to the Prime Minister's role.'.  The app presents a new prompt, ready for a new question, though the animation restarts."/>
+  <a href="./python/ollama_mistral_instruct_chat/README.md">Mistral LLM chat demo calling local Ollama server from Python code.</a></dd>
 </dl>
 
 ## 🤔 Why run local LLMs?
@@ -112,13 +119,13 @@ Feel free to jump into the
 
 ## Feature requests
 
-New feature suggestions are always welcome and will be considered, though please keep in mind that some of them may be out of scope for what the project is trying to achieve (or is reasonably capable of). If you have an idea for a new feature and would like to share it, you can do so [here](/issues/new?template=feature_request.yml).
+New feature suggestions are always welcome and will be considered, though please keep in mind that some of them may be out of scope for what the project is trying to achieve (or is reasonably capable of). If you have an idea for a new feature and would like to share it, you can do so [here](./issues/new?template=feature_request.yml).
 
 Feature requests are tagged with one of the following:
 
-- [Roadmap](/labels/roadmap) - will be implemented in a future release
-- [Backlog](/labels/backlog) - may be implemented in the future but needs further feedback or interest from the community
-- [Icebox](/labels/icebox) - no plans to implement as it doesn't currently align with the project's goals or capabilities, may be revised at a later date
+- [Roadmap](./labels/roadmap) - will be implemented in a future release
+- [Backlog](./labels/backlog) - may be implemented in the future but needs further feedback or interest from the community
+- [Icebox](./labels/icebox) - no plans to implement as it doesn't currently align with the project's goals or capabilities, may be revised at a later date
 
 ## Contributions
 
@@ -143,6 +150,13 @@ much time on more involved additions.
 
 </details>
 
+## Acknowledgements
+
+Inspired by:
+
+- [llama.cpp](https://github.com/ggml-org/llama.cpp); and
+- [Ollama](https://ollama.com/);
+
 ## License
 
-The project is licensed under BSD 3-Clause License — see the [LICENSE](/LICENSE) file for details.
+The project is licensed under BSD 3-Clause License — see the [LICENSE](./LICENSE) file for details.
