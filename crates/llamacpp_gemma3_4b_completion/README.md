@@ -49,7 +49,7 @@ configured to use.
 Clone this repo and from the repository root folder run:
 
 ```shell
-cargo run --bin llamacpp_gemma3_4b_completion
+cargo run --bin llamacpp-gemma3-4b-completion
 ```
 
 Code makes use of the server’s REST API.

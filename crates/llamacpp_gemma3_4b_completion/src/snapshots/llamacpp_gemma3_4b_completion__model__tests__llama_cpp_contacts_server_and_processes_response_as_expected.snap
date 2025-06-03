@@ -1,0 +1,11 @@
+---
+source: crates/llamacpp_gemma3_4b_completion/src/model.rs
+expression: outcome
+---
+{
+  "content": "\n\nOkay, here's one:\n\nWhy did the scarecrow win an award?\n\n...Because he was outstanding in his field!\n\n---\n\nDid you enjoy that one?  Would you like to hear another? :)\n",
+  "model": "gpt-3.5-turbo",
+  "tokens_predicted": 48,
+  "tokens_evaluated": 8,
+  "prompt": "<bos>Please tell me a funny joke."
+}
