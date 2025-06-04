@@ -15,8 +15,9 @@ name = "llamacpp-gemma3-4b-completion"
 clap.workspace = true
 clap-verbosity-flag.workspace = true
 env_logger.workspace = true
+eventsource-client.workspace = true
 futures-util.workspace = true
-humantime = "2.2.0"
+humantime.workspace = true
 indicatif.workspace = true
 log.workspace = true
 miette.workspace = true
@@ -24,3 +25,10 @@ reqwest.workspace = true
 serde.workspace = true
 serde_json.workspace = true
 tokio.workspace = true
+wiremock.workspace = true
+
+[dev-dependencies]
+http.workspace = true
+insta.workspace = true
+mocktail.workspace = true
+wiremock.workspace = true

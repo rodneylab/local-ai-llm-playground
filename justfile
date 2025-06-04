@@ -1,3 +1,13 @@
+default:
+    just --list
+
+# clean build and test artefacts
+clean:
+    rm -f ./**/local-ai-llm-playground-*.profraw 2>/dev/null
+    rm -f local-ai-llm-playground-*.profraw 2>/dev/null
+    rm -f crates/llamacpp_gemma3_4b_completion/local-ai-llm-playground-*.profraw 2>/dev/null
+    rm -rf target 2>/dev/null
+
 # find comments in Rust source
 comments:
     rg --pcre2 -t rust '(^|\s+)(\/\/|\/\*)\s+(?!(act|arrange|assert))' .
@@ -40,6 +50,10 @@ coverage:
 doc crate:
     cargo doc -p {{ crate }}
     @echo "`pwd`/target/doc/`echo \"{{ crate }}\" | tr - _`/index.html" | pbcopy
+
+# review (accept/reject/...) insta snapshots
+insta-snapshot-review:
+    cargo insta review
 
 # check links are valid
 linkcheck:

@@ -43,7 +43,7 @@ Source: [Running Local LLMs](https://github.com/di37/running-llms-locally#advant
   - [Installation](#installation)
 - [Examples](#examples)
 - [Why Run Local LLMs?](#-why-run-local-llms)
-- [Issues and Support](#-issues-and-support)
+- [Issues and Support](#️-issues-and-support)
 - [Contributions](#contributions)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)

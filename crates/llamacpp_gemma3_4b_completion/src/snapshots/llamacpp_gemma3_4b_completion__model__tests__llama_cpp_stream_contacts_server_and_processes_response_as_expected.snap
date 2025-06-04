@@ -1,0 +1,11 @@
+---
+source: crates/llamacpp_gemma3_4b_completion/src/model.rs
+expression: outcome
+---
+{
+  "content": "\n\nHyperText Markup Language\n\n",
+  "model": "gpt-3.5-turbo",
+  "tokens_predicted": 7,
+  "tokens_evaluated": 14,
+  "prompt": "<bos>Could you tell me what HTML stands for? Please be concise."
+}

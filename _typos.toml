@@ -1,0 +1,9 @@
+# https://github.com/crate-ci/typos
+# install:  cargo install typos-cli
+# run:      typos
+
+[default.extend-words]
+typ = "typ"
+
+[files]
+extend-exclude = ["crates/llamacpp_gemma3_4b_completion/src/test_fixtures/**/*"]

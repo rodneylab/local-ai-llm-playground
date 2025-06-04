@@ -4,7 +4,7 @@ mod cli;
 mod model;
 mod ui;
 
-use std::time::Duration;
+use std::{io, time::Duration};
 
 use clap::Parser;
 use indicatif::ProgressBar;
@@ -23,14 +23,16 @@ async fn main() -> miette::Result<()> {
         .init();
 
     let client = reqwest::Client::new();
-    let prompt = get_prompt()?;
+    let stdio = io::stdin();
+    let input = stdio.lock();
+    let prompt = get_prompt(input, &mut std::io::stdout())?;
     println!("\nPrompt: `{prompt}`");
 
     if cli.no_stream {
         let bar = ProgressBar::new_spinner();
         println!("\nSending prompt to llama.cpp server and awaiting response...");
         bar.enable_steady_tick(Duration::from_millis(100));
-        let response = llama_cpp(&prompt, &client).await?;
+        let response = llama_cpp(&prompt, &client, None).await?;
         bar.finish();
         let LlamaCppResponse {
             prompt, content, ..
@@ -38,7 +40,7 @@ async fn main() -> miette::Result<()> {
         println!("Prompt: {prompt}\n\nResponse: {content}");
     } else {
         println!("\nSending prompt to llama.cpp server and awaiting response...");
-        llama_cpp_stream(&prompt, &client).await?;
+        llama_cpp_stream(&prompt, None).await?;
     }
 
     Ok(())

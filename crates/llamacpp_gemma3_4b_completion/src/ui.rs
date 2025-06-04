@@ -1,4 +1,4 @@
-use std::io::{self, Write};
+use std::io::Write;
 
 use miette::{Context, IntoDiagnostic};
 
@@ -23,14 +23,19 @@ pub fn display_chunk(stdout_handle: &mut impl Write, chunk: &str) -> miette::Res
     Ok(())
 }
 
-pub fn get_prompt() -> miette::Result<String> {
-    print!("Enter prompt for Gemma model...\n>>> ");
-    io::stdout()
+pub fn get_prompt(
+    mut reader: impl std::io::BufRead,
+    mut writer: impl std::io::Write,
+) -> miette::Result<String> {
+    write!(writer, "Enter prompt for Gemma model...\n>>> ")
+        .into_diagnostic()
+        .wrap_err("Writing prompt to writer")?;
+    writer
         .flush()
         .into_diagnostic()
         .wrap_err("Writing prompt to stdout")?;
     let mut prompt = String::new();
-    io::stdin()
+    reader
         .read_line(&mut prompt)
         .into_diagnostic()
         .wrap_err("Reading prompt from stdin")?;
@@ -42,6 +47,8 @@ pub fn get_prompt() -> miette::Result<String> {
 #[cfg(test)]
 mod tests {
     use crate::ui::display_chunk;
+
+    use super::get_prompt;
 
     #[test]
     fn display_chunk_outputs_single_word() {
@@ -129,5 +136,23 @@ To read the jungle’s signs, the dew, the hue
         // assert
         let output = str::from_utf8(&output).unwrap();
         assert_eq!(output, chunks.join(""));
+    }
+
+    #[test]
+    fn get_prompt_outputs_expected_user_prompt() {
+        // arrange
+        let input_buffer = b"Please tell me a funny joke.\n".to_vec();
+        let mut output_buffer: Vec<u8> = Vec::new();
+
+        // act
+        let outcome = get_prompt(&input_buffer[..], &mut output_buffer).unwrap();
+
+        // assert
+        assert!(
+            str::from_utf8(&output_buffer)
+                .unwrap()
+                .starts_with("Enter prompt for Gemma model...\n>>> ")
+        );
+        assert_eq!(outcome, "Please tell me a funny joke.".to_string());
     }
 }
