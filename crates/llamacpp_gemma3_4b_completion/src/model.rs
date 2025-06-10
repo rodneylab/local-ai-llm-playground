@@ -119,7 +119,7 @@ pub async fn llama_cpp_stream(
         .body(
             serde_json::to_string(&request_data)
                 .into_diagnostic()
-                .wrap_err("Serialising llama.cpp requesy JSON body")?,
+                .wrap_err("Serialising llama.cpp request JSON body")?,
         )
         .build();
     let mut stream = handle_events(&client);
