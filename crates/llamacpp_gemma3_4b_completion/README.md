@@ -20,6 +20,9 @@ llamacpp-gemma3-4b-completion
 <dt>Model</dt>
   <dd><a href="https://huggingface.co/google/gemma-3-4b-it-qat-q4_0-gguf">Gemma3 4B parameters, instruction-trained (gemma3-4b-it)</a></dd>
 
+<dt>Capabilities</dt>
+  <dd>vision</dd>
+
 <dt>Model download size</dt>
   <dd>3.16GB</dd>
 </dl>

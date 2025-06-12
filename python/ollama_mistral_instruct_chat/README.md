@@ -20,6 +20,9 @@ ollama-mistral-instruct-chat
 <dt>Model</dt>
   <dd><a href="https://ollama.com/library/mistral">Mistral-7B-Instruct-v0.3</a></dd>
 
+<dt>Capabilities</dt>
+  <dd>completion, tools</dd>
+
 <dt>Model download size</dt>
   <dd>4.1GB</dd>
 </dl>
