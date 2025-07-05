@@ -271,7 +271,7 @@ mod tests {
         });
         let llamacpp_server = mocktail::server::MockServer::new("llama.cpp")
             .with_config(mocktail::server::MockServerConfig {
-                listen_addr: IpAddr::V4(Ipv4Addr::new(127, 0, 0, 1)),
+                listen_addr: IpAddr::V4(Ipv4Addr::LOCALHOST),
                 ..Default::default()
             })
             .with_mocks(mocks);
