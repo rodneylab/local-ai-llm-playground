@@ -58,6 +58,10 @@ Clone this repo and from the repository root folder run:
 uv run python/ollama_mistral_instruct_chat/src/main.py
 ```
 
+At the `>>>` prompt, type a question for Mistral to answer then press the ENTER
+key to submit it. The model will start responding after a short delay. Type
+`/exit` to quit, when you are done.
+
 Code makes use of the server’s REST API.
 
 ## 🧐 What's inside?
