@@ -37,9 +37,9 @@ members = ["python/*"]
 
 [tool.uv]
 dev-dependencies = [
-  "coverage>=7.8.2",
+  "coverage>=7.10.6",
   "httpretty>=1.1.4",
-  "requests>=2.32.3",
+  "requests>=2.32.5",
 ]
 package = false
 
