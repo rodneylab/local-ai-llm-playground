@@ -19,7 +19,8 @@ authors = ["Rodney Johnson <ask@rodneylab.com>"]
 edition = "2024"
 license = "BSD-3-Clause"
 repository = "https://github.com/rodneylab/local-ai-llm-playground"
-rust-version = "1.87.0"
+# wiremock 0.6.5 requires Rust 1.88.0
+rust-version = "1.88.0"
 description = "Experiments will local LLMs in Python and Rust"
 
 [workspace.dependencies]
@@ -33,12 +34,12 @@ humantime = "2.3.0"
 indicatif = "0.18.0"
 insta = { version = "1.43.2", features = ["filters", "glob", "json"] }
 jiff = { version = "0.2.15", features = ["serde"] }
-log = "0.4.27"
+log = "0.4.28"
 miette = { version = "7.6.0", features = ["fancy"] }
 mocktail = "0.3.0"
 reqwest = { version = "0.12.23", features = ["json"] }
-serde = { version = "1.0.219", features = ["derive"] }
-serde_json = "1.0.143"
+serde = { version = "1.0.223", features = ["derive"] }
+serde_json = "1.0.145"
 tokio = { version = "1.47.1", features = ["full"] }
 wiremock = "0.6.5"
 
