@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.13"
 
 [manifest]
@@ -599,6 +599,12 @@ wheels = [
 ]
 
 [[package]]
+name = "httpretty"
+version = "1.1.4"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/6e/19/850b7ed736319d0c4088581f4fc34f707ef14461947284026664641e16d4/httpretty-1.1.4.tar.gz", hash = "sha256:20de0e5dd5a18292d36d928cc3d6e52f8b2ac73daec40d41eb62dee154933b68", size = 442389, upload-time = "2021-08-16T19:35:31.4Z" }
+
+[[package]]
 name = "httptools"
 version = "0.6.4"
 source = { registry = "https://pypi.org/simple" }
@@ -878,12 +884,18 @@ source = { virtual = "." }
 [package.dev-dependencies]
 dev = [
     { name = "coverage" },
+    { name = "httpretty" },
+    { name = "requests" },
 ]
 
 [package.metadata]
 
 [package.metadata.requires-dev]
-dev = [{ name = "coverage", specifier = ">=7.8.2" }]
+dev = [
+    { name = "coverage", specifier = ">=7.8.2" },
+    { name = "httpretty", specifier = ">=1.1.4" },
+    { name = "requests", specifier = ">=2.32.3" },
+]
 
 [[package]]
 name = "loguru"
@@ -1069,7 +1081,7 @@ wheels = [
 [[package]]
 name = "ollama-mistral-instruct-chat"
 version = "0.1.0"
-source = { virtual = "python/ollama_mistral_instruct_chat" }
+source = { editable = "python/ollama_mistral_instruct_chat" }
 dependencies = [
     { name = "chromadb" },
     { name = "fastembed" },
