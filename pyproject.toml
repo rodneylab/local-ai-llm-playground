@@ -29,6 +29,14 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = []
 
+[dependency-groups]
+dev = [
+  "coverage>=7.10.6",
+  "httpx>=0.25.0",
+  "requests>=2.32.5",
+  "respx>=0.22.0",
+]
+
 [tool.uv.sources]
 ollama_mistral_instruct_chat = { workspace = true }
 
@@ -36,11 +44,6 @@ ollama_mistral_instruct_chat = { workspace = true }
 members = ["python/*"]
 
 [tool.uv]
-dev-dependencies = [
-  "coverage>=7.10.6",
-  "httpretty>=1.1.4",
-  "requests>=2.32.5",
-]
 package = false
 
 [tool.ruff.lint.flake8-type-checking]
