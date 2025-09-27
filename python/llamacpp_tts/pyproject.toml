@@ -1,0 +1,12 @@
+[project]
+name = "llamacpp-tts"
+version = "0.1.0"
+description = "Large Language Model text-to-speech (TTS) demo with voice cloning."
+readme = "README.md"
+requires-python = ">=3.10.0,<3.13.0"
+dependencies = [
+  "argparse>=1.4.0",
+  "numpy<2",
+  "outetts>=0.4.4",
+  "torch<2.3",
+]

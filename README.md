@@ -88,6 +88,10 @@ Nothing to install beyond the prerequisites.
     <a href="./crates/llamacpp_gemma3_4b_completion/README.md">Gemma3 LLM completion demo calling local llama.cpp server from Rust code.</a>
 </dd>
 
+<dt>llamacpp-gemma3-4b-completion</dt>
+    <dd>
+    <a href="./python/llamacpp_tts/README.md">Large Language Model text-to-speech (TTS) demo with voice cloning.</a>
+    </dd>
 <dt>ollama-mistral-instruct-chat</dt>
 <dd>
   <img src="./images/ollama_mistral_instruct_chat.gif" alt="Terminal animation shows the user entering the following command: 'uv run python/ollama_mistral_instruct_chat/src/main.py'. The app starts running and a prompt appears.  At the prompt, the user types 'Who was the first Prime Minister of Great Britain?', then hits enter.  After a short delay, of a few seconds, the model response starts streaming, it reads 'The position of Prime Minister in the United Kingdom does not exactly correspond to the Prime Minister you might be thinking of.  The office of Prime Minister as we know it today did not formally exist until the 18th century.  However, if we consider someone who played a role similar to that of a modern Prime Minister, Sir Robert Walpole is often considered the first defacto Ptime Minister, serving from 1721 to 1742 under King George II. He was the dominant figure in British politics during his long tenure and held various positions, including First Lord of the Treasuary and Chancellor of the Exchequer, although these titles were not yet officially linked to the Prime Minister's role.'.  The app presents a new prompt, ready for a new question, though the animation restarts."/>

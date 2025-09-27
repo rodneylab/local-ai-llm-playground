@@ -26,13 +26,16 @@ name = "local-ai-llm-playground"
 version = "0.1.0"
 description = "Experiments running offline LLMs in Python and Rust locally"
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = []
+requires-python = ">=3.10.0,<3.13.0"
+dependencies = [
+  "ollama>=0.5.3",
+]
 
 [dependency-groups]
 dev = [
-  "coverage>=7.10.6",
+  "coverage>=7.10.7",
   "httpx>=0.25.0",
+  "mypy>=1.18.2",
   "requests>=2.32.5",
   "respx>=0.22.0",
 ]
@@ -45,6 +48,10 @@ members = ["python/*"]
 
 [tool.uv]
 package = false
+
+[[tool.mypy.overrides]]
+module = ["outetts.*"]
+follow_untyped_imports = true
 
 [tool.ruff.lint.flake8-type-checking]
 strict = true
