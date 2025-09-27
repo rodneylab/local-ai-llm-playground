@@ -21,3 +21,5 @@ images/.DS_Store
 .coverage
 coverage.lcov
 coverage.xml
+python/llamacpp_tts/data/*.wav
+python/llamacpp_tts/speakers/*.json

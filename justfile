@@ -19,14 +19,18 @@ expects:
 # run python unit tests using unittest
 test:
     # start Ollama server with `ollama serve` before running
+    uv run -m unittest -v ./python/llamacpp_tts/test/test_llamacpp_tts.py
     uv run -m unittest -v \
         ./python/ollama_mistral_instruct_chat/test/test_ollama_mistral_instruct_chat.py
 
 # run coverage using grcov
 coverage:
     # Python coverage
-    uv run -m coverage run -m unittest -v \
+    uv run -m coverage run --parallel-mode -m unittest -v \
+        ./python/llamacpp_tts/test/test_llamacpp_tts.py
+    uv run -m coverage run --parallel-mode -m unittest -v \
         ./python/ollama_mistral_instruct_chat/test/test_ollama_mistral_instruct_chat.py
+    uv run -m coverage combine
     uv run -m coverage report
     uv run -m coverage html
     uv run -m coverage lcov

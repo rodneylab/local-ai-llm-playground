@@ -25,7 +25,7 @@ def send(chat: str) -> str:
 
 
 def main():
-    print("trying-ai/python/ollama_mistral_instruct_chat")
+    print("local-ai-llm-playground/python/ollama_mistral_instruct_chat")
     while True:
         chat = input(">>> ")
 
