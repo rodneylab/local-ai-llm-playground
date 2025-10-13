@@ -77,7 +77,7 @@ afplay output.wav
 
 On Linux use aplay instead (`aplay output.wav`).
 
-[![Listen to hello world output](https://raw.githubusercontent.com/rodneylab/local-ai-llm-playground/main/assets/video-thumbnail.png)(https://raw.githubusercontent.com/rodneylab/local-ai-llm-playground/main/assets/kipling-if-output.mp4)
+[![Listen to hello world output](https://raw.githubusercontent.com/rodneylab/local-ai-llm-playground/main/assets/video-thumbnail.png)](https://raw.githubusercontent.com/rodneylab/local-ai-llm-playground/main/assets/kipling-if-output.mp4)
 
 ### Training / Voice cloning
 
@@ -103,7 +103,7 @@ uv run python/llamacpp_tts/src/main.py tts -t "Hello! How do you do?" \
     -s python/llamacpp_tts/speakers/some_speaker.json
 ```
 
-[![Listen to an extract of Rudyard Kipling’s <em>If</em> recited by trained voice](https://raw.githubusercontent.com/rodneylab/local-ai-llm-playground/main/assets/video-thumbnail.png)(https://raw.githubusercontent.com/rodneylab/local-ai-llm-playground/main/assets/kipling-if-output.mp4)
+[![Listen to an extract of Rudyard Kipling’s <em>If</em> recited by trained voice](https://raw.githubusercontent.com/rodneylab/local-ai-llm-playground/main/assets/video-thumbnail.png)](https://raw.githubusercontent.com/rodneylab/local-ai-llm-playground/main/assets/kipling-if-output.mp4)
 
 ## 🧐 What's inside?
 
