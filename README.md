@@ -88,7 +88,7 @@ Nothing to install beyond the prerequisites.
     <a href="./crates/llamacpp_gemma3_4b_completion/README.md">Gemma3 LLM completion demo calling local llama.cpp server from Rust code.</a>
 </dd>
 
-<dt>llamacpp-gemma3-4b-completion</dt>
+<dt>llamacpp_tts</dt>
     <dd>
     <a href="./python/llamacpp_tts/README.md">Large Language Model text-to-speech (TTS) demo with voice cloning.</a>
     </dd>
