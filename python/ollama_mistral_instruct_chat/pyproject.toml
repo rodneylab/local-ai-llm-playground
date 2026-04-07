@@ -10,5 +10,5 @@ dependencies = [
   "langchain>=0.3.27",
   "langchain-community>=0.3.29",
   "langchain-ollama>=0.3.8",
-  "ollama>=0.5.3",
+  "ollama>=0.6.1",
 ]

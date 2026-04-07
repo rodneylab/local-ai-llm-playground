@@ -1,5 +1,5 @@
 ---
-source: crates/llamacpp_gemma3_4b_completion/src/model.rs
+source: crates/llamacpp_gemma4_e4b_completion/src/model.rs
 expression: outcome
 ---
 {
