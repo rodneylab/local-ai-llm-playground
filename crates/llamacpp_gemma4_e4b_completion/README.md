@@ -26,17 +26,17 @@
   <dt>Server</dt>
   <dd>llama.cpp</dd>
 
-  <dt>Model</dt>
+<dt>Model</dt>
   <dd>
     <a href="https://huggingface.co/ggml-org/gemma-4-E4B-it-GGUF"
       >Gemma4 E4B parameters, instruction-trained (gemma4-E4B-it)</a
     >
   </dd>
 
-  <dt>Capabilities</dt>
+<dt>Capabilities</dt>
   <dd>vision</dd>
 
-  <dt>Model download size</dt>
+<dt>Model download size</dt>
   <dd>5.34GB</dd>
 </dl>
 

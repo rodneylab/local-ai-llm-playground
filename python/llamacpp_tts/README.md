@@ -22,10 +22,10 @@ llamacpp-tts
     >
   </dd>
 
-  <dt>Capabilities</dt>
+<dt>Capabilities</dt>
   <dd>text-to-speech</dd>
 
-  <dt>Model download size</dt>
+<dt>Model download size</dt>
   <dd>1.3GB</dd>
 </dl>
 

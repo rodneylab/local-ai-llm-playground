@@ -106,7 +106,7 @@ Nothing to install beyond the prerequisites.
     >
   </dd>
 
-  <dt>llamacpp_tts</dt>
+<dt>llamacpp_tts</dt>
   <dd>
     <a href="./python/llamacpp_tts/README.md"
       >Large Language Model text-to-speech (TTS) demo with voice cloning.</a
