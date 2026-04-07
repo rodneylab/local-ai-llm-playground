@@ -3,6 +3,9 @@
 
 import argparse
 import logging
+from pathlib import Path
+from typing import Any
+
 from outetts import (
     Backend,
     GenerationConfig,
@@ -13,9 +16,6 @@ from outetts import (
     Models,
     SamplerConfig,
 )
-from pathlib import Path
-from typing import Any
-
 
 logger = logging.getLogger(__name__)
 
