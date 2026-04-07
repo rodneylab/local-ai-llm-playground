@@ -59,6 +59,10 @@ doc crate:
 insta-snapshot-review:
     cargo insta review
 
+# clean unreferenced insta snapshots
+insta-snapshot-clean:
+    cargo insta test --unreferenced=delete
+
 # check links are valid
 linkcheck:
     lychee --cache --max-cache-age 1d --exclude-path "deny.toml" . "**/*.toml" "**/*.rs" "**/*.yml"
