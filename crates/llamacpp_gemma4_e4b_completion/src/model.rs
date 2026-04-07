@@ -5,6 +5,7 @@ use std::{
 
 use futures_util::{Stream, TryStreamExt};
 use humantime::format_duration;
+use launchdarkly_sdk_transport::HyperTransport;
 use miette::{Context, IntoDiagnostic, bail};
 
 use crate::ui::display_chunk;
@@ -109,6 +110,11 @@ pub async fn llama_cpp_stream(
     let mut tokens_predicted = 0;
     let mut tokens_evaluated = 0;
 
+    let transport = HyperTransport::builder()
+        .connect_timeout(std::time::Duration::from_secs(10))
+        .read_timeout(std::time::Duration::from_secs(30))
+        .build_http()
+        .unwrap();
     let client = eventsource_client::ClientBuilder::for_url(&format!("{base_url}/completion"))
         .into_diagnostic()
         .wrap_err("Creating eventsource client")?
@@ -121,7 +127,7 @@ pub async fn llama_cpp_stream(
                 .into_diagnostic()
                 .wrap_err("Serialising llama.cpp request JSON body")?,
         )
-        .build();
+        .build_with_transport(transport);
     let mut stream = handle_events(&client);
 
     while let Ok(Some(value)) = stream.try_next().await {

@@ -14,8 +14,13 @@ llamacpp-tts
 ## 📝 Key details
 
 <dl>
-<dt>Model</dt>
-  <dd><a href="https://huggingface.co/OuteAI/Llama-OuteTTS-1.0-1B-GGUF/resolve/main/Llama-OuteTTS-1.0-1B-Q8_0.gguf">OuteTTS-1.0-1B-Q8_0</a></dd>
+  <dt>Model</dt>
+  <dd>
+    <a
+      href="https://huggingface.co/OuteAI/Llama-OuteTTS-1.0-1B-GGUF/resolve/main/Llama-OuteTTS-1.0-1B-Q8_0.gguf"
+      >OuteTTS-1.0-1B-Q8_0</a
+    >
+  </dd>
 
 <dt>Capabilities</dt>
   <dd>text-to-speech</dd>
@@ -64,12 +69,12 @@ uv run python/llamacpp_tts/src/main.py tts -t "Hello! How do you do?"`
 ```
 
 This will save a wav file containing the spoken audio Hello! How do you do?"
-using the default voice. You can also train the model to use a voice from a short audio
-recording (see below). The first time you run that last command, it will download the OuteTTS model, which
-might take a little while.
+using the default voice. You can also train the model to use a voice from a
+short audio recording (see below). The first time you run that last command, it
+will download the OuteTTS model, which might take a little while.
 
-The audio is saved to `output.wav` in the working directory. You can play it back using
-VLC or IINA, or in the Terminal on macOS:
+The audio is saved to `output.wav` in the working directory. You can play it
+back using VLC or IINA, or in the Terminal on macOS:
 
 ```
 afplay output.wav
@@ -81,7 +86,10 @@ On Linux use aplay instead (`aplay output.wav`).
 
 ### Training / Voice cloning
 
-To clone a voice you will need a short wav clip (15 seconds should be enough). You can use FFmpeg to strip audio from an MP4 video or convert MP3 or AAC to wav. Running the model in training mode, creates a speaker JSON file that you can use for voicing text going forward.
+To clone a voice you will need a short wav clip (15 seconds should be enough).
+You can use FFmpeg to strip audio from an MP4 video or convert MP3 or AAC to
+wav. Running the model in training mode, creates a speaker JSON file that you
+can use for voicing text going forward.
 
 ```shell
 uv run python/llamacpp_tts/src/main.py train \
@@ -89,11 +97,13 @@ uv run python/llamacpp_tts/src/main.py train \
     -o python/llamacpp_tts/speakers/some_speaker.json
 ```
 
-Here, we are running in **train** mode, take `some_speaker.wav` as the input audio and
-create the speaker file `some_speaker.json`.
+Here, we are running in **train** mode, take `some_speaker.wav` as the input
+audio and create the speaker file `some_speaker.json`.
 
-Running the command will start a one-off download of the [Whisper automatic speech
-recognition (ASR) model](https://openai.com/index/whisper/), and a wav tokeniser. All models run locally, and work offline, after initial download.
+Running the command will start a one-off download of the
+[Whisper automatic speech recognition (ASR) model](https://openai.com/index/whisper/),
+and a wav tokeniser. All models run locally, and work offline, after initial
+download.
 
 Once you have the speaker file, you can use it to voice some text as before,
 this time with the new cloned voice:

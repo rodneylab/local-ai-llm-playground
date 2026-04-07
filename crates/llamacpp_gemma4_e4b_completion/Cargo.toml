@@ -1,5 +1,5 @@
 [package]
-name = "llamacpp-gemma3-4b-completion"
+name = "llamacpp-gemma4-e4b-completion"
 version.workspace = true
 authors.workspace = true
 edition.workspace = true
@@ -9,7 +9,7 @@ rust-version.workspace = true
 
 [[bin]]
 path = "src/main.rs"
-name = "llamacpp-gemma3-4b-completion"
+name = "llamacpp-gemma4-e4b-completion"
 
 [dependencies]
 clap.workspace = true
@@ -19,6 +19,7 @@ eventsource-client.workspace = true
 futures-util.workspace = true
 humantime.workspace = true
 indicatif.workspace = true
+launchdarkly-sdk-transport.workspace = true
 log.workspace = true
 miette.workspace = true
 reqwest.workspace = true

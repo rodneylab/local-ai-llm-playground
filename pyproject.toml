@@ -33,15 +33,16 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-  "coverage>=7.10.7",
+  "coverage>=7.13.4",
   "httpx>=0.25.0",
-  "mypy>=1.18.2",
+  "mypy>=1.19.0",
   "requests>=2.32.5",
   "respx>=0.22.0",
 ]
 
 [tool.uv.sources]
 ollama_mistral_instruct_chat = { workspace = true }
+llamacpp_tts = { workspace = true }
 
 [tool.uv.workspace]
 members = ["python/*"]
@@ -52,6 +53,9 @@ package = false
 [[tool.mypy.overrides]]
 module = ["outetts.*"]
 follow_untyped_imports = true
+
+[tool.ruff.lint]
+extend-select = ["I"]
 
 [tool.ruff.lint.flake8-type-checking]
 strict = true

@@ -1,6 +1,7 @@
-import respx
 import sys
 import unittest
+
+import respx
 
 sys.path.insert(0, "python/ollama_mistral_instruct_chat/src")
 
