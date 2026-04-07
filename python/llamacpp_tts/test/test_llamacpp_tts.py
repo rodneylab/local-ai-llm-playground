@@ -1,6 +1,6 @@
 import sys
-from tempfile import NamedTemporaryFile
 import unittest
+from tempfile import NamedTemporaryFile
 
 sys.path.insert(0, "python/llamacpp_tts/src")
 
