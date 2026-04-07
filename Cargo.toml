@@ -30,7 +30,7 @@ edition = "2024"
 license = "BSD-3-Clause"
 repository = "https://github.com/rodneylab/local-ai-llm-playground"
 # wiremock 0.6.5 requires Rust 1.88.0
-rust-version = "1.88.0"
+rust-version = "1.92.0"
 description = "Experiments will local LLMs in Python and Rust"
 
 [workspace.dependencies]
