@@ -43,7 +43,7 @@ For other operating systems, or more details, see the
 Next, to get the model:
 
 ```shell
-ollama pull mistral:7b
+ollama pull mistral:instruct
 ```
 
 Finally, start the server:
