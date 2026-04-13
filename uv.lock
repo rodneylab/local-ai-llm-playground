@@ -2,15 +2,9 @@ version = 1
 revision = 3
 requires-python = ">=3.10.0, <3.13.0"
 resolution-markers = [
-    "(python_full_version >= '3.12' and platform_machine != 'x86_64') or (python_full_version >= '3.12' and sys_platform != 'darwin')",
-    "python_full_version >= '3.12' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
-    "(python_full_version == '3.11.*' and platform_machine != 'x86_64') or (python_full_version == '3.11.*' and sys_platform != 'darwin')",
-    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
-    "(python_full_version < '3.11' and platform_machine != 'x86_64') or (python_full_version < '3.11' and sys_platform != 'darwin')",
-    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
-]
-required-markers = [
-    "platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version >= '3.12'",
+    "python_full_version == '3.11.*'",
+    "python_full_version < '3.11'",
 ]
 
 [manifest]
@@ -18,7 +12,6 @@ members = [
     "llamacpp-tts",
     "local-ai-llm-playground",
     "ollama-mistral-instruct-chat",
-    "ollama-mistral-nemo-rag",
 ]
 
 [[package]]
@@ -260,24 +253,11 @@ wheels = [
 ]
 
 [[package]]
-name = "beautifulsoup4"
-version = "4.14.3"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "soupsieve" },
-    { name = "typing-extensions" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/c3/b0/1c6a16426d389813b48d95e26898aff79abbde42ad353958ad95cc8c9b21/beautifulsoup4-4.14.3.tar.gz", hash = "sha256:6292b1c5186d356bba669ef9f7f051757099565ad9ada5dd630bd9de5fa7fb86", size = 627737, upload-time = "2025-11-30T15:08:26.084Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/1a/39/47f9197bdd44df24d67ac8893641e16f386c984a0619ef2ee4c51fbbc019/beautifulsoup4-4.14.3-py3-none-any.whl", hash = "sha256:0918bfe44902e6ad8d57732ba310582e98da931428d231a5ecb9e7c703a735bb", size = 107721, upload-time = "2025-11-30T15:08:24.087Z" },
-]
-
-[[package]]
 name = "build"
 version = "1.4.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "colorama", marker = "(os_name == 'nt' and platform_machine != 'x86_64') or (os_name == 'nt' and sys_platform != 'darwin')" },
+    { name = "colorama", marker = "os_name == 'nt'" },
     { name = "importlib-metadata", marker = "python_full_version < '3.10.2'" },
     { name = "packaging" },
     { name = "pyproject-hooks" },
@@ -416,8 +396,8 @@ dependencies = [
     { name = "kubernetes" },
     { name = "mmh3" },
     { name = "numpy" },
-    { name = "onnxruntime", version = "1.23.2", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version < '3.11' and platform_machine != 'x86_64') or (python_full_version < '3.11' and sys_platform != 'darwin') or (platform_machine == 'x86_64' and sys_platform == 'darwin')" },
-    { name = "onnxruntime", version = "1.24.4", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version >= '3.11' and platform_machine != 'x86_64') or (python_full_version >= '3.11' and sys_platform != 'darwin')" },
+    { name = "onnxruntime", version = "1.23.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "onnxruntime", version = "1.24.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
     { name = "opentelemetry-api" },
     { name = "opentelemetry-exporter-otlp-proto-grpc" },
     { name = "opentelemetry-sdk" },
@@ -471,7 +451,7 @@ name = "coloredlogs"
 version = "15.0.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "humanfriendly", marker = "(python_full_version < '3.11' and platform_machine != 'x86_64') or (python_full_version < '3.11' and sys_platform != 'darwin') or (platform_machine == 'x86_64' and sys_platform == 'darwin')" },
+    { name = "humanfriendly", marker = "python_full_version < '3.11'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/cc/c7/eed8f27100517e8c0e6b923d5f0845d0cb99763da6fdee00478f91db7325/coloredlogs-15.0.1.tar.gz", hash = "sha256:7c991aa71a4577af2f82600d8f8f3a89f936baeaf9b50a9c197da014e5bf16b0", size = 278520, upload-time = "2021-06-11T10:22:45.202Z" }
 wheels = [
@@ -483,8 +463,7 @@ name = "contourpy"
 version = "1.3.2"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "(python_full_version < '3.11' and platform_machine != 'x86_64') or (python_full_version < '3.11' and sys_platform != 'darwin')",
-    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11'",
 ]
 dependencies = [
     { name = "numpy", marker = "python_full_version < '3.11'" },
@@ -534,10 +513,8 @@ name = "contourpy"
 version = "1.3.3"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "(python_full_version >= '3.12' and platform_machine != 'x86_64') or (python_full_version >= '3.12' and sys_platform != 'darwin')",
-    "python_full_version >= '3.12' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
-    "(python_full_version == '3.11.*' and platform_machine != 'x86_64') or (python_full_version == '3.11.*' and sys_platform != 'darwin')",
-    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version >= '3.12'",
+    "python_full_version == '3.11.*'",
 ]
 dependencies = [
     { name = "numpy", marker = "python_full_version >= '3.11'" },
@@ -667,8 +644,7 @@ dependencies = [
     { name = "einops" },
     { name = "numpy" },
     { name = "torch" },
-    { name = "torchaudio", version = "2.2.2", source = { registry = "https://pypi.org/simple" }, marker = "platform_machine == 'x86_64' and sys_platform == 'darwin'" },
-    { name = "torchaudio", version = "2.11.0", source = { registry = "https://pypi.org/simple" }, marker = "platform_machine != 'x86_64' or sys_platform != 'darwin'" },
+    { name = "torchaudio" },
     { name = "tqdm" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/7b/89/022d30f42091b0228f24449d0083130d44a1f6d141ad67f2cc67e22679d2/descript-audio-codec-1.0.0.tar.gz", hash = "sha256:56a5a541128686821570756512d405534e9d7a978b34adf2510cfe981f0b00e0", size = 23711, upload-time = "2023-07-20T18:10:30.913Z" }
@@ -704,8 +680,7 @@ dependencies = [
     { name = "tensorboard" },
     { name = "torch" },
     { name = "torch-stoi" },
-    { name = "torchaudio", version = "2.2.2", source = { registry = "https://pypi.org/simple" }, marker = "platform_machine == 'x86_64' and sys_platform == 'darwin'" },
-    { name = "torchaudio", version = "2.11.0", source = { registry = "https://pypi.org/simple" }, marker = "platform_machine != 'x86_64' or sys_platform != 'darwin'" },
+    { name = "torchaudio" },
     { name = "tqdm" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/8c/e7/8c4d16e8ff5785103877a7782a41585b23ea3a457681cca20fe1d79f0810/descript-audiotools-0.7.2.tar.gz", hash = "sha256:2cdd363025c771b8acc53d5ef9ec77e34f92e182272c4be7fd0118a99b6a5e2a", size = 99357, upload-time = "2023-07-19T17:41:05.139Z" }
@@ -757,8 +732,7 @@ dependencies = [
     { name = "einops" },
     { name = "numpy" },
     { name = "torch" },
-    { name = "torchaudio", version = "2.2.2", source = { registry = "https://pypi.org/simple" }, marker = "platform_machine == 'x86_64' and sys_platform == 'darwin'" },
-    { name = "torchaudio", version = "2.11.0", source = { registry = "https://pypi.org/simple" }, marker = "platform_machine != 'x86_64' or sys_platform != 'darwin'" },
+    { name = "torchaudio" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/62/59/e47bbd0542d0e6f4ce9983d5eb458a01d4b42c81e5c410cb9e159b1061ae/encodec-0.1.1.tar.gz", hash = "sha256:36dde98ccfe6c51a15576476cadfcb3b35a63507b8b8555abd69889a6fba6772", size = 3736037, upload-time = "2022-10-25T16:13:21.471Z" }
 
@@ -792,8 +766,8 @@ dependencies = [
     { name = "loguru" },
     { name = "mmh3" },
     { name = "numpy" },
-    { name = "onnxruntime", version = "1.23.2", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version < '3.11' and platform_machine != 'x86_64') or (python_full_version < '3.11' and sys_platform != 'darwin') or (platform_machine == 'x86_64' and sys_platform == 'darwin')" },
-    { name = "onnxruntime", version = "1.24.4", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version >= '3.11' and platform_machine != 'x86_64') or (python_full_version >= '3.11' and sys_platform != 'darwin')" },
+    { name = "onnxruntime", version = "1.23.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "onnxruntime", version = "1.24.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
     { name = "pillow" },
     { name = "py-rust-stemmers" },
     { name = "requests" },
@@ -1220,8 +1194,7 @@ name = "ipython"
 version = "8.39.0"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "(python_full_version < '3.11' and platform_machine != 'x86_64') or (python_full_version < '3.11' and sys_platform != 'darwin')",
-    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11'",
 ]
 dependencies = [
     { name = "colorama", marker = "python_full_version < '3.11' and sys_platform == 'win32'" },
@@ -1246,8 +1219,7 @@ name = "ipython"
 version = "9.10.1"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "(python_full_version == '3.11.*' and platform_machine != 'x86_64') or (python_full_version == '3.11.*' and sys_platform != 'darwin')",
-    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.11.*'",
 ]
 dependencies = [
     { name = "colorama", marker = "python_full_version == '3.11.*' and sys_platform == 'win32'" },
@@ -1272,8 +1244,7 @@ name = "ipython"
 version = "9.12.0"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "(python_full_version >= '3.12' and platform_machine != 'x86_64') or (python_full_version >= '3.12' and sys_platform != 'darwin')",
-    "python_full_version >= '3.12' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version >= '3.12'",
 ]
 dependencies = [
     { name = "colorama", marker = "python_full_version >= '3.12' and sys_platform == 'win32'" },
@@ -1491,20 +1462,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/98/3f/888a7099d2bd2917f8b0c3ffc7e347f1e664cf64267820b0b923c4f339fc/langchain-1.2.15.tar.gz", hash = "sha256:1717b6719daefae90b2728314a5e2a117ff916291e2862595b6c3d6fba33d652", size = 574732, upload-time = "2026-04-03T14:26:03.994Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/3f/e8/a3b8cb0005553f6a876865073c81ef93bd7c5b18381bcb9ba4013af96ebc/langchain-1.2.15-py3-none-any.whl", hash = "sha256:e349db349cb3e9550c4044077cf90a1717691756cc236438404b23500e615874", size = 112714, upload-time = "2026-04-03T14:26:02.557Z" },
-]
-
-[[package]]
-name = "langchain-chroma"
-version = "1.1.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "chromadb" },
-    { name = "langchain-core" },
-    { name = "numpy" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/fa/0e/54896830b7331c90788cf96b2c37858977c199da9ecdaf85cf11eb6e6bc1/langchain_chroma-1.1.0.tar.gz", hash = "sha256:8069685e7848041e998d16c8a4964256b031fd20551bf59429173415bc2adc12", size = 220382, upload-time = "2025-12-12T16:23:01.399Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/ae/35/2a6d1191acaad043647e28313b0ecd161d61f09d8be37d1996a90d752c13/langchain_chroma-1.1.0-py3-none-any.whl", hash = "sha256:ff65e4a2ccefb0fb9fde2ff38705022ace402f979d557f018f6e623f7288f0fc", size = 12981, upload-time = "2025-12-12T16:23:00.196Z" },
 ]
 
 [[package]]
@@ -1830,7 +1787,7 @@ dev = [
     { name = "httpx", specifier = ">=0.25.0" },
     { name = "mypy", specifier = ">=1.19.0" },
     { name = "requests", specifier = ">=2.32.5" },
-    { name = "respx", specifier = ">=0.22.0" },
+    { name = "respx", specifier = ">=0.23.1" },
 ]
 
 [[package]]
@@ -2256,8 +2213,7 @@ name = "networkx"
 version = "3.4.2"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "(python_full_version < '3.11' and platform_machine != 'x86_64') or (python_full_version < '3.11' and sys_platform != 'darwin')",
-    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11'",
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/fd/1d/06475e1cd5264c0b870ea2cc6fdb3e37177c1e565c43f56ff17a10e3937f/networkx-3.4.2.tar.gz", hash = "sha256:307c3669428c5362aab27c8a1260aa8f47c4e91d3891f48be0141738d8d053e1", size = 2151368, upload-time = "2024-10-21T12:39:38.695Z" }
 wheels = [
@@ -2269,10 +2225,8 @@ name = "networkx"
 version = "3.6.1"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "(python_full_version >= '3.12' and platform_machine != 'x86_64') or (python_full_version >= '3.12' and sys_platform != 'darwin')",
-    "python_full_version >= '3.12' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
-    "(python_full_version == '3.11.*' and platform_machine != 'x86_64') or (python_full_version == '3.11.*' and sys_platform != 'darwin')",
-    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version >= '3.12'",
+    "python_full_version == '3.11.*'",
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/6a/51/63fe664f3908c97be9d2e4f1158eb633317598cfa6e1fc14af5383f17512/networkx-3.6.1.tar.gz", hash = "sha256:26b7c357accc0c8cde558ad486283728b65b6a95d85ee1cd66bafab4c8168509", size = 2517025, upload-time = "2025-12-08T17:02:39.908Z" }
 wheels = [
@@ -2488,47 +2442,19 @@ requires-dist = [
 ]
 
 [[package]]
-name = "ollama-mistral-nemo-rag"
-version = "0.1.0"
-source = { virtual = "python/ollama_mistral_nemo_rag" }
-dependencies = [
-    { name = "beautifulsoup4" },
-    { name = "chromadb" },
-    { name = "fastembed" },
-    { name = "langchain" },
-    { name = "langchain-chroma" },
-    { name = "langchain-community" },
-    { name = "langchain-ollama" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "beautifulsoup4", specifier = ">=4.14.0" },
-    { name = "chromadb", specifier = ">=1.1.0" },
-    { name = "fastembed", specifier = ">=0.7.3" },
-    { name = "langchain", specifier = ">=0.3.27" },
-    { name = "langchain-chroma", specifier = ">=0.2.6" },
-    { name = "langchain-community", specifier = ">=0.3.29" },
-    { name = "langchain-ollama", specifier = ">=0.3.8" },
-]
-
-[[package]]
 name = "onnxruntime"
 version = "1.23.2"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "python_full_version >= '3.12' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
-    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
-    "(python_full_version < '3.11' and platform_machine != 'x86_64') or (python_full_version < '3.11' and sys_platform != 'darwin')",
-    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11'",
 ]
 dependencies = [
-    { name = "coloredlogs", marker = "(python_full_version < '3.11' and platform_machine != 'x86_64') or (python_full_version < '3.11' and sys_platform != 'darwin') or (platform_machine == 'x86_64' and sys_platform == 'darwin')" },
-    { name = "flatbuffers", marker = "(python_full_version < '3.11' and platform_machine != 'x86_64') or (python_full_version < '3.11' and sys_platform != 'darwin') or (platform_machine == 'x86_64' and sys_platform == 'darwin')" },
-    { name = "numpy", marker = "(python_full_version < '3.11' and platform_machine != 'x86_64') or (python_full_version < '3.11' and sys_platform != 'darwin') or (platform_machine == 'x86_64' and sys_platform == 'darwin')" },
-    { name = "packaging", marker = "(python_full_version < '3.11' and platform_machine != 'x86_64') or (python_full_version < '3.11' and sys_platform != 'darwin') or (platform_machine == 'x86_64' and sys_platform == 'darwin')" },
-    { name = "protobuf", marker = "(python_full_version < '3.11' and platform_machine != 'x86_64') or (python_full_version < '3.11' and sys_platform != 'darwin') or (platform_machine == 'x86_64' and sys_platform == 'darwin')" },
-    { name = "sympy", marker = "(python_full_version < '3.11' and platform_machine != 'x86_64') or (python_full_version < '3.11' and sys_platform != 'darwin') or (platform_machine == 'x86_64' and sys_platform == 'darwin')" },
+    { name = "coloredlogs", marker = "python_full_version < '3.11'" },
+    { name = "flatbuffers", marker = "python_full_version < '3.11'" },
+    { name = "numpy", marker = "python_full_version < '3.11'" },
+    { name = "packaging", marker = "python_full_version < '3.11'" },
+    { name = "protobuf", marker = "python_full_version < '3.11'" },
+    { name = "sympy", marker = "python_full_version < '3.11'" },
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/35/d6/311b1afea060015b56c742f3531168c1644650767f27ef40062569960587/onnxruntime-1.23.2-cp310-cp310-macosx_13_0_arm64.whl", hash = "sha256:a7730122afe186a784660f6ec5807138bf9d792fa1df76556b27307ea9ebcbe3", size = 17195934, upload-time = "2025-10-27T23:06:14.143Z" },
@@ -2553,15 +2479,15 @@ name = "onnxruntime"
 version = "1.24.4"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "(python_full_version >= '3.12' and platform_machine != 'x86_64') or (python_full_version >= '3.12' and sys_platform != 'darwin')",
-    "(python_full_version == '3.11.*' and platform_machine != 'x86_64') or (python_full_version == '3.11.*' and sys_platform != 'darwin')",
+    "python_full_version >= '3.12'",
+    "python_full_version == '3.11.*'",
 ]
 dependencies = [
-    { name = "flatbuffers", marker = "(python_full_version >= '3.11' and platform_machine != 'x86_64') or (python_full_version >= '3.11' and sys_platform != 'darwin')" },
-    { name = "numpy", marker = "(python_full_version >= '3.11' and platform_machine != 'x86_64') or (python_full_version >= '3.11' and sys_platform != 'darwin')" },
-    { name = "packaging", marker = "(python_full_version >= '3.11' and platform_machine != 'x86_64') or (python_full_version >= '3.11' and sys_platform != 'darwin')" },
-    { name = "protobuf", marker = "(python_full_version >= '3.11' and platform_machine != 'x86_64') or (python_full_version >= '3.11' and sys_platform != 'darwin')" },
-    { name = "sympy", marker = "(python_full_version >= '3.11' and platform_machine != 'x86_64') or (python_full_version >= '3.11' and sys_platform != 'darwin')" },
+    { name = "flatbuffers", marker = "python_full_version >= '3.11'" },
+    { name = "numpy", marker = "python_full_version >= '3.11'" },
+    { name = "packaging", marker = "python_full_version >= '3.11'" },
+    { name = "protobuf", marker = "python_full_version >= '3.11'" },
+    { name = "sympy", marker = "python_full_version >= '3.11'" },
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/60/69/6c40720201012c6af9aa7d4ecdd620e521bd806dc6269d636fdd5c5aeebe/onnxruntime-1.24.4-cp311-cp311-macosx_14_0_arm64.whl", hash = "sha256:0bdfce8e9a6497cec584aab407b71bf697dac5e1b7b7974adc50bf7533bdb3a2", size = 17332131, upload-time = "2026-03-17T22:05:49.005Z" },
@@ -2773,8 +2699,7 @@ dependencies = [
     { name = "sounddevice" },
     { name = "soundfile" },
     { name = "torch" },
-    { name = "torchaudio", version = "2.2.2", source = { registry = "https://pypi.org/simple" }, marker = "platform_machine == 'x86_64' and sys_platform == 'darwin'" },
-    { name = "torchaudio", version = "2.11.0", source = { registry = "https://pypi.org/simple" }, marker = "platform_machine != 'x86_64' or sys_platform != 'darwin'" },
+    { name = "torchaudio" },
     { name = "torchvision" },
     { name = "tqdm" },
     { name = "transformers" },
@@ -3557,14 +3482,14 @@ wheels = [
 
 [[package]]
 name = "respx"
-version = "0.22.0"
+version = "0.23.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "httpx" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/f4/7c/96bd0bc759cf009675ad1ee1f96535edcb11e9666b985717eb8c87192a95/respx-0.22.0.tar.gz", hash = "sha256:3c8924caa2a50bd71aefc07aa812f2466ff489f1848c96e954a5362d17095d91", size = 28439, upload-time = "2024-12-19T22:33:59.374Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/43/98/4e55c9c486404ec12373708d015ebce157966965a5ebe7f28ff2c784d41b/respx-0.23.1.tar.gz", hash = "sha256:242dcc6ce6b5b9bf621f5870c82a63997e8e82bc7c947f9ffe272b8f3dd5a780", size = 29243, upload-time = "2026-04-08T14:37:16.008Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/8e/67/afbb0978d5399bc9ea200f1d4489a23c9a1dad4eee6376242b8182389c79/respx-0.22.0-py2.py3-none-any.whl", hash = "sha256:631128d4c9aba15e56903fb5f66fb1eff412ce28dd387ca3a81339e52dbd3ad0", size = 25127, upload-time = "2024-12-19T22:33:57.837Z" },
+    { url = "https://files.pythonhosted.org/packages/1d/4a/221da6ca167db45693d8d26c7dc79ccfc978a440251bf6721c9aaf251ac0/respx-0.23.1-py2.py3-none-any.whl", hash = "sha256:b18004b029935384bccfa6d7d9d74b4ec9af73a081cc28600fffc0447f4b8c1a", size = 25557, upload-time = "2026-04-08T14:37:14.613Z" },
 ]
 
 [[package]]
@@ -3675,8 +3600,7 @@ name = "scikit-learn"
 version = "1.7.2"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "(python_full_version < '3.11' and platform_machine != 'x86_64') or (python_full_version < '3.11' and sys_platform != 'darwin')",
-    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11'",
 ]
 dependencies = [
     { name = "joblib", marker = "python_full_version < '3.11'" },
@@ -3708,10 +3632,8 @@ name = "scikit-learn"
 version = "1.8.0"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "(python_full_version >= '3.12' and platform_machine != 'x86_64') or (python_full_version >= '3.12' and sys_platform != 'darwin')",
-    "python_full_version >= '3.12' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
-    "(python_full_version == '3.11.*' and platform_machine != 'x86_64') or (python_full_version == '3.11.*' and sys_platform != 'darwin')",
-    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version >= '3.12'",
+    "python_full_version == '3.11.*'",
 ]
 dependencies = [
     { name = "joblib", marker = "python_full_version >= '3.11'" },
@@ -3740,8 +3662,7 @@ name = "scipy"
 version = "1.15.3"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "(python_full_version < '3.11' and platform_machine != 'x86_64') or (python_full_version < '3.11' and sys_platform != 'darwin')",
-    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11'",
 ]
 dependencies = [
     { name = "numpy", marker = "python_full_version < '3.11'" },
@@ -3782,10 +3703,8 @@ name = "scipy"
 version = "1.17.1"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "(python_full_version >= '3.12' and platform_machine != 'x86_64') or (python_full_version >= '3.12' and sys_platform != 'darwin')",
-    "python_full_version >= '3.12' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
-    "(python_full_version == '3.11.*' and platform_machine != 'x86_64') or (python_full_version == '3.11.*' and sys_platform != 'darwin')",
-    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version >= '3.12'",
+    "python_full_version == '3.11.*'",
 ]
 dependencies = [
     { name = "numpy", marker = "python_full_version >= '3.11'" },
@@ -3874,15 +3793,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/57/5e/70bdd9579b35003a489fc850b5047beeda26328053ebadc1fb60f320f7db/soundfile-0.13.1-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:03267c4e493315294834a0870f31dbb3b28a95561b80b134f0bd3cf2d5f0e618", size = 1313646, upload-time = "2025-01-25T09:16:54.872Z" },
     { url = "https://files.pythonhosted.org/packages/fe/df/8c11dc4dfceda14e3003bb81a0d0edcaaf0796dd7b4f826ea3e532146bba/soundfile-0.13.1-py2.py3-none-win32.whl", hash = "sha256:c734564fab7c5ddf8e9be5bf70bab68042cd17e9c214c06e365e20d64f9a69d5", size = 899881, upload-time = "2025-01-25T09:16:56.663Z" },
     { url = "https://files.pythonhosted.org/packages/14/e9/6b761de83277f2f02ded7e7ea6f07828ec78e4b229b80e4ca55dd205b9dc/soundfile-0.13.1-py2.py3-none-win_amd64.whl", hash = "sha256:1e70a05a0626524a69e9f0f4dd2ec174b4e9567f4d8b6c11d38b5c289be36ee9", size = 1019162, upload-time = "2025-01-25T09:16:59.573Z" },
-]
-
-[[package]]
-name = "soupsieve"
-version = "2.8.3"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/7b/ae/2d9c981590ed9999a0d91755b47fc74f74de286b0f5cee14c9269041e6c4/soupsieve-2.8.3.tar.gz", hash = "sha256:3267f1eeea4251fb42728b6dfb746edc9acaffc4a45b27e19450b676586e8349", size = 118627, upload-time = "2026-01-20T04:27:02.457Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/46/2c/1462b1d0a634697ae9e55b3cecdcb64788e8b7d63f54d923fcd0bb140aed/soupsieve-2.8.3-py3-none-any.whl", hash = "sha256:ed64f2ba4eebeab06cc4962affce381647455978ffc1e36bb79a545b91f45a95", size = 37016, upload-time = "2026-01-20T04:27:01.012Z" },
 ]
 
 [[package]]
@@ -4164,8 +4074,7 @@ dependencies = [
     { name = "numpy" },
     { name = "pystoi" },
     { name = "torch" },
-    { name = "torchaudio", version = "2.2.2", source = { registry = "https://pypi.org/simple" }, marker = "platform_machine == 'x86_64' and sys_platform == 'darwin'" },
-    { name = "torchaudio", version = "2.11.0", source = { registry = "https://pypi.org/simple" }, marker = "platform_machine != 'x86_64' or sys_platform != 'darwin'" },
+    { name = "torchaudio" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/47/a4/23be9a35b6c5b5c4547d24c52b07f4a5d55406a5ae43d9cce09f2352d75a/torch_stoi-0.2.3.tar.gz", hash = "sha256:228207b8d63548336c5520b156f1e6b30d3ae3db1fb3c41999f01aee087c5f85", size = 9224, upload-time = "2024-09-30T15:22:12.841Z" }
 wheels = [
@@ -4174,31 +4083,8 @@ wheels = [
 
 [[package]]
 name = "torchaudio"
-version = "2.2.2"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version >= '3.12' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
-    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
-    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
-]
-dependencies = [
-    { name = "torch", marker = "platform_machine == 'x86_64' and sys_platform == 'darwin'" },
-]
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/76/70/ca793994d37815070f6b53932b71822f66cfb3e197e6937426815998221e/torchaudio-2.2.2-cp310-cp310-macosx_10_13_x86_64.whl", hash = "sha256:b1d58201d108e85db3e35b84319f33884f61f327c38ead86913218c8c1acc3dd", size = 3398751, upload-time = "2024-03-27T21:12:31.998Z" },
-    { url = "https://files.pythonhosted.org/packages/57/c4/80cc3315dd1ca706643b78f894901d4d888ffe376a5e401f73d9db61071e/torchaudio-2.2.2-cp311-cp311-macosx_10_13_x86_64.whl", hash = "sha256:f1a81a518a3e86c004125eb891fc433ce8fb2343295b5d612d0f37b24e131efd", size = 3405553, upload-time = "2024-03-27T21:12:19.497Z" },
-    { url = "https://files.pythonhosted.org/packages/05/39/fcc68b1f848a38b57446b624be42db66fec3587972941a5b86fc19b8bd45/torchaudio-2.2.2-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:da3cc523696166ea525d2b3377d789da5388f36d94a20a324b09df00f1c43458", size = 3400705, upload-time = "2024-03-27T21:12:10.303Z" },
-]
-
-[[package]]
-name = "torchaudio"
 version = "2.11.0"
 source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "(python_full_version >= '3.12' and platform_machine != 'x86_64') or (python_full_version >= '3.12' and sys_platform != 'darwin')",
-    "(python_full_version == '3.11.*' and platform_machine != 'x86_64') or (python_full_version == '3.11.*' and sys_platform != 'darwin')",
-    "(python_full_version < '3.11' and platform_machine != 'x86_64') or (python_full_version < '3.11' and sys_platform != 'darwin')",
-]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/8c/d9/357eb5fe4e19a861e6fa1af4d9f535e8fa8692336e6cf436e8a21262e054/torchaudio-2.11.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:6ebb59c694909eccb5d61b7cc199d297692012c43286e36d92983aa7bad7586d", size = 684145, upload-time = "2026-03-23T18:13:46.671Z" },
     { url = "https://files.pythonhosted.org/packages/2a/79/90de77e73f395bba2fe477f8e82e4ae1d14d6452a706838765e850a5e80c/torchaudio-2.11.0-cp310-cp310-manylinux_2_28_aarch64.whl", hash = "sha256:be7ad472acb16d16e98c005f0219b0db06a47dfe8f7b4d177062e1638f871e3b", size = 1626521, upload-time = "2026-03-23T18:13:40.98Z" },
