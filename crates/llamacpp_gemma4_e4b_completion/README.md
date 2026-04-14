@@ -1,6 +1,6 @@
 <img
-  src="../../images/llamacpp-gemma3-4b-completion.png"
-  alt="Rodney Lab Local A I L L M Playground llama.cpp Gemma 3 4B Completion Git Hub banner"
+  src="../../images/llamacpp_gemma4_e4b_completion.png"
+  alt="Rodney Lab Local A I L L M Playground llama.cpp Gemma 4 e4B Completion Git Hub banner"
 />
 
 <p align="center">
@@ -16,7 +16,7 @@
     />
   </a>
 </p>
-<h1 align="center">llamacpp-gemma3-4b-completion</h1>
+<h1 align="center">llamacpp-gemma4-e4b-completion</h1>
 
 **Large Language Model chat demo calling local llama.cpp server from Rust code.**
 
