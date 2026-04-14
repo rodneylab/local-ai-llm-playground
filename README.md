@@ -97,7 +97,7 @@ Nothing to install beyond the prerequisites.
   <dt>llamacpp-gemma4-e4b-completion</dt>
   <dd>
     <img
-      src="../../images/llamacpp_gemma4_e4b_completion.gif"
+      src="./images/llamacpp_gemma4_e4b_completion.gif"
       alt="Terminal animation shows the user entering the following command: 'cargo run --bin gemma-3-4b-it-qat-q4_0-gguf'. The app starts running and a prompt appears. At the prompt, the user types 'Building a website can be done in 10 simple steps:', then hits enter. The app responds with a stream of output ending with a copy of the input prompt, then the text 'Sending prompt to llama.cpp and awaiting response...'. After a short delay, of a few seconds, the model response starts streaming, it reads ' 1. Choose a domain name and web hosting provider. 2. Select a website builder or CMS. 3. Design your website layout. 4. Create your content. 5. Add images and videos. 6. Optimize your website for search engines. 7. Test your website on different devices. 8. Launch your website. 9. Promote your website. 10. Maintain and update your website regularly. Do you want me to elaborate on any of these steps, or perhaps provide links to resources for each?'. The app presents a new prompt, ready for a new question, though the animation restarts."
     />
     <a href="./crates/llamacpp_gemma4_e4b_completion/README.md"
@@ -188,7 +188,7 @@ yet clear
 Inspired by:
 
 - [llama.cpp](https://github.com/ggml-org/llama.cpp); and
-- [Ollama](https://ollama.com/);
+- [Ollama](https://ollama.com/).
 
 ## License
 
