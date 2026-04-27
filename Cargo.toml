@@ -34,7 +34,7 @@ rust-version = "1.92.0"
 description = "Experiments will local LLMs in Python and Rust"
 
 [workspace.dependencies]
-clap = { version = "4.6.0", features = ["derive"] }
+clap = { version = "4.6.1", features = ["derive"] }
 clap-verbosity-flag = "3.0.4"
 env_logger = "0.11.10"
 eventsource-client = "0.17.2"
