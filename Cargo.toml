@@ -43,7 +43,7 @@ http = "1.4.0"
 humantime = "2.3.0"
 indicatif = "0.18.4"
 insta = { version = "1.47.2", features = ["filters", "glob", "json"] }
-jiff = { version = "0.2.23", features = ["serde"] }
+jiff = { version = "0.2.24", features = ["serde"] }
 launchdarkly-sdk-transport = "0.1.1"
 log = "0.4.29"
 miette = { version = "7.6.0", features = ["fancy"] }
