@@ -39,7 +39,7 @@ clap-verbosity-flag = "3.0.4"
 env_logger = "0.11.10"
 eventsource-client = "0.17.3"
 futures-util = "0.3.32"
-http = "1.4.0"
+http = "1.4.1"
 humantime = "2.3.0"
 indicatif = "0.18.4"
 insta = { version = "1.47.2", features = ["filters", "glob", "json"] }
