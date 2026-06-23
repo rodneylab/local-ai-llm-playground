@@ -50,6 +50,7 @@ members = ["python/*"]
 [tool.uv]
 package = false
 exclude-newer = "7 days"
+exclude-newer-package = { langsmith = "2026-06-20T00:00:00Z" }
 
 [[tool.mypy.overrides]]
 module = ["outetts.*"]
