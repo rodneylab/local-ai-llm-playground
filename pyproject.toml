@@ -49,6 +49,7 @@ members = ["python/*"]
 
 [tool.uv]
 package = false
+exclude-newer = "7 days"
 
 [[tool.mypy.overrides]]
 module = ["outetts.*"]
