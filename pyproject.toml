@@ -33,7 +33,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-  "coverage>=7.13.4",
+  "coverage>=7.14.2",
   "httpx>=0.25.0",
   "mypy>=1.20.1",
   "requests>=2.32.5",
