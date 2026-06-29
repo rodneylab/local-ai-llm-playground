@@ -36,7 +36,7 @@ description = "Experiments will local LLMs in Python and Rust"
 [workspace.dependencies]
 clap = { version = "4.6.1", features = ["derive"] }
 clap-verbosity-flag = "3.0.4"
-env_logger = "0.11.10"
+env_logger = "0.11.11"
 eventsource-client = "0.17.5"
 futures-util = "0.3.32"
 http = "1.4.2"
@@ -44,7 +44,7 @@ humantime = "2.3.0"
 indicatif = "0.18.4"
 insta = { version = "1.48.0", features = ["filters", "glob", "json"] }
 jiff = { version = "0.2.29", features = ["serde"] }
-launchdarkly-sdk-transport = "0.1.3"
+launchdarkly-sdk-transport = "0.1.4"
 log = "0.4.33"
 miette = { version = "7.6.0", features = ["fancy"] }
 mocktail = "0.3.2"
