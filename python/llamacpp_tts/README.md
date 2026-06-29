@@ -65,7 +65,7 @@ uv`). See Astral [Installing uv guide for more options](https://docs.astral.sh/u
 To get going, clone this repo and from the repository root folder run:
 
 ```shell
-uv run python/llamacpp_tts/src/main.py tts -t "Hello! How do you do?"`
+uv run python/llamacpp_tts/src/main.py tts -t "Hello! How do you do?"
 ```
 
 This will save a wav file containing the spoken audio Hello! How do you do?"
