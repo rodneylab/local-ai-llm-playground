@@ -8,5 +8,5 @@ dependencies = [
   "argparse>=1.4.0",
   "numpy<2",
   "outetts>=0.4.4",
-  "torch<2.3",
+  "torch<2.15",
 ]
